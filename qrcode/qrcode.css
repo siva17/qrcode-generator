@@ -1,0 +1,169 @@
+.generateQRButtonCls {
+    width:300px;
+    height:60px;
+    color:black;
+    font-size:20px;
+    
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    
+    background:-webkit-linear-gradient(top, rgba(223,238,253,1), rgba(94,144,208,1) 50%, rgba(94,144,208,1) 50%, rgba(223,238,253,1));
+}
+
+.showItemCls td {
+    margin:0;
+    vertical-align: middle;
+}
+.showItemCls:hover td {
+    margin:0;
+    vertical-align: middle;
+}
+.showItemCls table {
+    border:0px;
+    padding:0px;
+    spacing:0px;
+}
+.hideItemCls {
+    display: none;
+}
+.mandatoryItemClass {
+    color:red;
+}
+
+table {
+    margin:10px 0 20px 0;
+    border: 5px solid lightgray;
+    border-spacing: 0;
+    width: 100%;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+td {
+    padding:10px;
+    padding-left:15px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    
+    -moz-box-shadow: inset 0 0 5px 5px #888;
+    -webkit-box-shadow: inset 0 0 5px 5px#888;
+    box-shadow: inset 0 0 5px 5px #888;
+    
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+td {
+    background:#f1f1f1;
+}
+
+.tableCellDesc {
+    width:180px;
+}
+.tableCellSecondDesc {
+    width:80px;
+}
+.tableCellValue {
+    width:520px;
+}
+
+form {
+    margin:10px 0 20px 0;
+}
+
+input, select, textarea{
+    font:normal normal 100% "Segoe UI",Calibri,"Myriad Pro",Myriad,"Trebuchet MS",Helvetica,Arial,sans-serif;
+    margin-bottom:5px;
+    padding:5px 10px;
+}
+
+input.big{
+    font-size: 24px;
+    padding: 3px;
+    margin-top: 2px;
+    margin-right: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #e5e5e5;
+    background: #fbfbfb;
+}
+
+optgroup{
+    color: #ddd;
+    font-style: italic;
+    font-weight: normal;
+}
+
+textarea{
+    height: 160px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    padding: 0;
+    display:inline;
+    vertical-align:-1px;
+}
+
+input[type="submit"]{cursor:pointer;}
+
+fieldset{
+    margin:1em 0 2em 0;
+    padding:10px;
+    border:1px solid #ddd;
+    background:#fff;
+}
+
+
+.spinnerWrapper {
+    display: show;
+    position:fixed;
+    width: 66px;
+    height: 66px;
+    top: 50%;
+    left: 50%;
+    margin-left:-33px;
+    margin-top:-33px;
+}
+.hideSpinner {
+    display: none;
+}
+div.loadingSpinner {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+}
+
+div.loadingSpinner div {
+    position: absolute;
+    width: 12%;
+    height: 26%;
+    background: black;
+    left: 44.5%;
+    top: 37%;
+    opacity: 0;
+    -webkit-animation: fade 1s linear infinite;
+    -webkit-border-radius: 50px;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+div.loadingSpinner div.bar1 {-webkit-transform:rotate(0deg) translate(0, -142%); -webkit-animation-delay: 0s;}    
+div.loadingSpinner div.bar2 {-webkit-transform:rotate(30deg) translate(0, -142%); -webkit-animation-delay: -0.9167s;}
+div.loadingSpinner div.bar3 {-webkit-transform:rotate(60deg) translate(0, -142%); -webkit-animation-delay: -0.833s;}
+div.loadingSpinner div.bar4 {-webkit-transform:rotate(90deg) translate(0, -142%); -webkit-animation-delay: -0.75s;}
+div.loadingSpinner div.bar5 {-webkit-transform:rotate(120deg) translate(0, -142%); -webkit-animation-delay: -0.667s;}
+div.loadingSpinner div.bar6 {-webkit-transform:rotate(150deg) translate(0, -142%); -webkit-animation-delay: -0.5833s;}
+div.loadingSpinner div.bar7 {-webkit-transform:rotate(180deg) translate(0, -142%); -webkit-animation-delay: -0.5s;}
+div.loadingSpinner div.bar8 {-webkit-transform:rotate(210deg) translate(0, -142%); -webkit-animation-delay: -0.41667s;}
+div.loadingSpinner div.bar9 {-webkit-transform:rotate(240deg) translate(0, -142%); -webkit-animation-delay: -0.333s;}
+div.loadingSpinner div.bar10 {-webkit-transform:rotate(270deg) translate(0, -142%); -webkit-animation-delay: -0.25s;}
+div.loadingSpinner div.bar11 {-webkit-transform:rotate(300deg) translate(0, -142%); -webkit-animation-delay: -0.1667s;}
+div.loadingSpinner div.bar12 {-webkit-transform:rotate(330deg) translate(0, -142%); -webkit-animation-delay: -0.0833s;}
+
+@-webkit-keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 0.25;}
+}
