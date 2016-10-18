@@ -919,7 +919,7 @@ QRCodeClass.prototype = {
         if(boxType == "f") {
             var canvasWidth = thisObject._qrFinalWidth;
             qrCanvas.clearRect(0,0,canvasWidth,canvasWidth);
-            qrCanvas.fillStyle = thisObject.colors.bg;
+            qrCanvas.fillStyle = '#'+thisObject.colors.bg;
             qrCanvas.fillRect(0,0,canvasWidth,canvasWidth);
             return;
         }
@@ -952,23 +952,23 @@ QRCodeClass.prototype = {
                (thisObject.fillValue == thisObject.fillType.CURVE_DEFILL)) {
                 // Filling outer border
                 radius = 0;
-                qrCanvas.fillStyle = borderColor;
+                qrCanvas.fillStyle = '#'+borderColor;
                 thisObject._fillCurve(qrCanvas,px*xValue,px*yValue,7*px,7*px,radius);
                 // Filling with bg between outer and inner block
-                qrCanvas.fillStyle = qrColors.bg;
+                qrCanvas.fillStyle = '#'+qrColors.bg;
                 thisObject._fillCurve(qrCanvas,px*(xValue+1),px*(yValue+1),5*px,5*px,radius);
                 // Filling inner block
-                qrCanvas.fillStyle = fillColor;
+                qrCanvas.fillStyle = '#'+fillColor;
                 thisObject._fillCurve(qrCanvas,px*(xValue+2),px*(yValue+2),3*px,3*px,radius);                
             } else {
                 // Filling outer border
-                qrCanvas.fillStyle = borderColor;
+                qrCanvas.fillStyle = '#'+borderColor;
                 thisObject._fillRectR(qrCanvas,px*xValue,px*yValue,7*px,7*px,radius);
                 // Filling with bg between outer and inner block
-                qrCanvas.fillStyle = qrColors.bg;
+                qrCanvas.fillStyle = '#'+qrColors.bg;
                 thisObject._fillRectR(qrCanvas,px*(xValue+1),px*(yValue+1),5*px,5*px,radius);
                 // Filling inner block
-                qrCanvas.fillStyle = fillColor;
+                qrCanvas.fillStyle = '#'+fillColor;
                 thisObject._fillRectR(qrCanvas,px*(xValue+2),px*(yValue+2),3*px,3*px,radius);
             }
         }
@@ -1055,7 +1055,7 @@ QRCodeClass.prototype = {
                     if(((i<7) && (j<7))||((rightV<=7) && (j<7))||((i<7) && (bottomV<=7)) ) continue;
                     
                     if( qrCodeFrame[(j*qrWidth)+i] ) {
-                        qrCanvas.fillStyle = thisObject.colors.dot;
+                        qrCanvas.fillStyle = '#'+thisObject.colors.dot;
                         var radius = 0;
                         if(fillType == thisObject.fillType.CIRPAT) {
                             radius = px;
@@ -1088,19 +1088,19 @@ QRCodeClass.prototype = {
                             var topDot    = ((j>0)?(qrCodeFrame[(j-1)*qrWidth+(i)]):(0));
                             var bottomDot = ((j<(qrWidth-1))?(qrCodeFrame[(j+1)*qrWidth+(i)]):(0));
                             
-                            qrCanvas.fillStyle = thisObject.colors.dot;
+                            qrCanvas.fillStyle = '#'+thisObject.colors.dot;
                             thisObject._fillRectR(qrCanvas,px*(emptySpace+i),px*(emptySpace+j),px,px,0);
                             
-                            qrCanvas.fillStyle = thisObject.colors.bg;
+                            qrCanvas.fillStyle = '#'+thisObject.colors.bg;
                             thisObject._fillRectReverseFill(qrCanvas,px*(emptySpace+i),px*(emptySpace+j),px,px,radius,leftDot,rightDot,topDot,bottomDot);
                         } else if(fillType == thisObject.fillType.CURVE_DEFILL) {
                             if(((i<(7+1)) && (j<(7+1)))||((rightV<=(7+1)) && (j<(7+1)))||((i<(7+1)) && (bottomV<=(7+1))) ) continue;
 
-                            qrCanvas.fillStyle = thisObject.colors.dot;
+                            qrCanvas.fillStyle = '#'+thisObject.colors.dot;
                             thisObject._fillRectR(qrCanvas,px*(emptySpace+i),px*(emptySpace+j),px,px,0);
                             
                             radius = (px-(px*0.6));
-                            qrCanvas.fillStyle = thisObject.colors.bg;
+                            qrCanvas.fillStyle = '#'+thisObject.colors.bg;
                             thisObject._fillCurveDeFill(qrCanvas,px*(emptySpace+i),px*(emptySpace+j),px,px,radius,qrCodeFrame,qrWidth,i,j);
                         }
                     }

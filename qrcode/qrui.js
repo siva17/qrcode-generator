@@ -71,21 +71,21 @@ function onChangeQRTypeSelect(type) {
     if(type=="site") {
         updateElementClass("qrWebSiteUrlID","showItemCls");
         updateElementClass("qrUrlShortenID","showItemCls");
-        updateElementClass("qrPhotoUrlID","showItemCls");
+        // updateElementClass("qrPhotoUrlID","showItemCls");
     } else if(type=="bookmark") {
         updateElementClass("qrBookMarkTextID","showItemCls");
         updateElementClass("qrWebSiteUrlID","showItemCls");
         updateElementClass("qrUrlShortenID","showItemCls");
-        updateElementClass("qrPhotoUrlID","showItemCls");
+        // updateElementClass("qrPhotoUrlID","showItemCls");
     } else if(type=="call") {
         updateElementClass("qrPhoneNumberID","showItemCls")
-        updateElementClass("qrPhotoUrlID","showItemCls");
+        // updateElementClass("qrPhotoUrlID","showItemCls");
     } else if(type=="sms") {
         updateElementClass("qrPhoneNumberID","showItemCls");
         updateElementClass("qrSMSMessageID","showItemCls")
     } else if(type=="email") {
         updateElementClass("qrEMailAddressID","showItemCls");
-        updateElementClass("qrPhotoUrlID","showItemCls");
+        // updateElementClass("qrPhotoUrlID","showItemCls");
     } else if(type=="mail") {
         updateElementClass("qrEMailRecipientID","showItemCls");
         updateElementClass("qrEMailSubjectID","showItemCls");
@@ -146,12 +146,12 @@ function onChangeQRTypeSelect(type) {
         updateElementClass("qrMapLocationID","showItemCls");
     } else if(type=="geo") {
         updateElementClass("qrMapLocationID","showItemCls");
-        updateElementClass("qrPhotoUrlID","showItemCls");
+        // updateElementClass("qrPhotoUrlID","showItemCls");
     } else if(type=="wifi") {
         updateElementClass("qrWIFISSIDID","showItemCls");
         updateElementClass("qrWIFIPasswordID","showItemCls");
         updateElementClass("qrWIFITypeID","showItemCls")
-        updateElementClass("qrPhotoUrlID","showItemCls");
+        // updateElementClass("qrPhotoUrlID","showItemCls");
     } else if(type=="text") {
         updateElementClass("qrTextValueID","showItemCls");
     }
@@ -215,7 +215,7 @@ function getQRString(config) {
             var photoImageID = document.getElementById("qrOutputPhotoID");
             photoImageID.src = photoValue;
         } else {
-            document.getElementById("qrOutputPhotoID").src = null;
+            document.getElementById("qrOutputPhotoID").src = '';
             document.qrCodeForm["qrPhotoUrl"].value = null;
         }
     } catch(e) {}
